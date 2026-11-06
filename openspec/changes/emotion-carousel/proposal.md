@@ -5,9 +5,9 @@ Kern der Badge sind einfache Emoji-Gesichter mit Grundemotionen, die man per Wis
 - Grundemotionen als Gesichter (Startmenge: fröhlich, traurig, überrascht, wütend, verliebt, müde, neutral).
 - Beim Wechsel spielt eine Emotion eine kurze Eintrittsanimation und hält dann ihren Ausdruck.
 - Antippen spielt die Eintrittsanimation erneut ab.
-- Wischen links/rechts wechselt im Kreis (Karussell, Endlosschleife).
+- Wischen von links nach rechts zeigt die nächste Emotion (rechts nach links: die vorherige), im Kreis (Karussell, Endlosschleife).
 - Schütteln wählt eine zufällige Emotion, Neigen lässt die Figur in Neigungsrichtung blicken (IMU QMI8658).
-- Bedienung ist ohne Sprache möglich; Wischen hat Vorrang.
+- Bedienung ausschließlich per Berührung: Wischen und Tippen.
 
 ## Capabilities
 ### New Capabilities

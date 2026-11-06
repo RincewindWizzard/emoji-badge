@@ -7,8 +7,8 @@ context: |
 
   Projekt: emoji-badge - eigene Rust-Firmware (no_std, esp-hal) fuer ein
   1,75" rundes AMOLED-Board (ESP32-S3R8, 466x466, QSPI, Touch CST9217,
-  Dual-Mikrofon, WiFi/BT5). Zielanwendung: Emoji-Badge, spaeter
-  XiaoZhi-AI/DeepSeek-Sprachanbindung.
+  Dual-Mikrofon, WiFi/BT5). Zielanwendung: Emoji-Badge mit
+  Wisch-Karussell. Keine Spracherkennung, keine Sprachsteuerung.
   Architektur: Workspace; `core/` = hardwareunabhaengige, auf dem Host
   testbare Render-Logik (no_std); Firmware-Crate (Xtensa-Toolchain) folgt.
 

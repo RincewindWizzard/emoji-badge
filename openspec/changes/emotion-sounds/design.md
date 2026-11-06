@@ -3,7 +3,7 @@ Wiedergabe über ES8311 (I2C 0x18) mit I2S (MCLK 42, BCLK 9, WS 45, DOUT 8) und 
 
 ## Goals / Non-Goals
 - Goals: einfacher Tonsequenzer, Melodien als Daten, einmalige Wiedergabe.
-- Non-Goals: Mikrofonaufnahme, Streaming, Sprachausgabe.
+- Non-Goals: Mikrofonaufnahme, Spracherkennung, Streaming, Sprachausgabe.
 
 ## Decisions
 - **Eigener Sequenzer** (Note, Dauer, Lautstärke) mit Rechteck/Sinus-Synthese statt Audiodateien: wenig Speicher, leicht änderbar.
