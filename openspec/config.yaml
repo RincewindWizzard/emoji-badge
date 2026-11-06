@@ -1,0 +1,35 @@
+schema: spec-driven
+
+context: |
+  Language: de
+  All artifacts must be written in de.
+  Keep OpenSpec structural headings and SHALL/MUST keywords in English.
+
+  Projekt: emoji-badge - eigene Rust-Firmware (no_std, esp-hal) fuer ein
+  1,75" rundes AMOLED-Board (ESP32-S3R8, 466x466, QSPI, Touch CST9217,
+  Dual-Mikrofon, WiFi/BT5). Zielanwendung: Emoji-Badge, spaeter
+  XiaoZhi-AI/DeepSeek-Sprachanbindung.
+  Architektur: Workspace; `core/` = hardwareunabhaengige, auf dem Host
+  testbare Render-Logik (no_std); Firmware-Crate (Xtensa-Toolchain) folgt.
+
+# Per-artifact rules (optional)
+# Add custom rules for specific artifacts.
+# Example:
+#   rules:
+#     proposal:
+#       - Keep proposals under 500 words
+#       - Always state what is out of scope
+#     tasks:
+#       - Break tasks into chunks of max 2 hours
+
+# Per-operation guidance (optional)
+# Add advisory guidance for how apply and archive work should be conducted.
+# This is separate from artifact rules above.
+# Example:
+#   operations:
+#     apply:
+#       guidance:
+#         - Keep test summaries concise
+#     archive:
+#       guidance:
+#         - Summarize the archive outcome before finishing
