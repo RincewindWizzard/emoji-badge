@@ -6,11 +6,11 @@ Hardware-Referenz des Zielboards ESP32-S3-Touch-AMOLED-1.75C-EN (Waveshare-Typ).
 ## Requirements
 
 ### Requirement: Mikrocontroller und Speicher
-Das Board SHALL einen ESP32-S3R8 (Xtensa LX7, 32 Bit, Dual-Core, bis 240 MHz) verwenden. Der Chip hat 512 KB SRAM, 384 KB ROM und 8 MB PSRAM; zusätzlich sind 32 MB externer Flash verbaut.
+Das Board SHALL einen ESP32-S3R8 (Xtensa LX7, 32 Bit, Dual-Core, bis 240 MHz) verwenden. Der Chip hat 512 KB SRAM, 384 KB ROM und 8 MB PSRAM; zusätzlich ist externer Flash verbaut. **Offen:** Die Händlerangabe nennt 32 MB, Waveshare nennt für die Standardversion 16 MB; die tatsächliche Größe SHALL per `espflash board-info` geprüft werden.
 
 #### Scenario: Speicherbudget der Firmware
 - **WHEN** die Firmware Speicher plant (z. B. Framebuffer, Audiopuffer)
-- **THEN** SHALL sie von 8 MB PSRAM und 32 MB Flash ausgehen
+- **THEN** SHALL sie von 8 MB PSRAM ausgehen und zunächst nur 16 MB Flash annehmen
 - **AND** ein vollständiger RGB565-Framebuffer (466×466×2 B ≈ 434 KiB) SHALL im PSRAM liegen, nicht im internen SRAM
 
 ### Requirement: Drahtlose Kommunikation
@@ -37,7 +37,7 @@ Das Board SHALL einen kapazitiven Touch-Controller CST9217 besitzen, angebunden 
 - **THEN** SHALL die Firmware die Koordinaten über I2C vom CST9217 lesen
 
 ### Requirement: Audio
-Das Board SHALL ein Dual-Mikrofon-Array mit Rauschunterdrückung und Echounterdrückung (Nah- und Fernfeld), einen energieeffizienten Audio-Codec und einen integrierten Lautsprecher besitzen.
+Das Board SHALL ein Dual-Mikrofon-Array mit Rauschunterdrückung und Echounterdrückung (Nah- und Fernfeld), einen Wiedergabe-Codec ES8311 mit Verstärker NS4150B, einen 4-Kanal-Aufnahme-ADC ES7210 (Mikrofone) und einen Lautsprecher-Anschluss (MX1.25) besitzen. Außerdem sind eine RTC (PCF85063), ein TCA9554-IO-Expander und ein TF-Kartenslot verbaut.
 
 #### Scenario: Sprachaufnahme und Wiedergabe
 - **WHEN** die Firmware Sprache aufnimmt oder wiedergibt
@@ -67,7 +67,7 @@ Das Board SHALL einen USB-Typ-C-Anschluss sowie zwei frei belegbare Seitentasten
 - **AND** BOOT SHALL beim Einschalten weiterhin den Download-Modus auslösen können
 
 ### Requirement: Gehäuse und Lieferumfang
-Das Board SHALL in einem CNC-gefertigten Aluminiumgehäuse geliefert werden. Der Lieferumfang umfasst das Hauptgerät, ein silbernes Polyester-Lanyard und optional einen Lithiumakku.
+Das Board SHALL in einem CNC-gefertigten Aluminiumgehäuse geliefert werden. Der Lieferumfang umfasst das Hauptgerät (ESP32-S3-Touch-AMOLED-1.75C-EN), ein silbernes Polyester-Lanyard und optional einen Lithiumakku.
 
 #### Scenario: Metallgehäuse
 - **WHEN** WLAN-/BT-Reichweite bewertet wird
