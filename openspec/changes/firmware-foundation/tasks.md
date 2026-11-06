@@ -1,5 +1,5 @@
 ## 1. Projektgerüst
-- [ ] 1.1 Xtensa-Toolchain dokumentieren (espup, espflash) und `firmware/`-Crate anlegen
+- [x] 1.1 Xtensa-Toolchain dokumentieren (espup, espflash) und `firmware/`-Crate anlegen
 - [x] 1.2 Pinbelegung als Modul `board` mit Werten aus `board-pinout`
 - [ ] 1.3 CI-Job für den Firmware-Build ergänzen
 
@@ -18,4 +18,4 @@
 - [ ] 4.2 Pinbelegung des Modells 1.75C bestätigen und Specs korrigieren
 
 ## Hinweis zum Stand
-Geschrieben und auf dem Host getestet: Pin-Modul `board`, Gestenerkennung (Tippen/Wischen), CO5300-Befehls- und Rahmenlogik, CST9217-Bericht-Parser (Format unverifiziert). `firmware/` (esp-hal-Anbindung, Selbsttest) ist geschrieben, aber nicht gebaut oder getestet, weil in der Entwicklungsumgebung keine Xtensa-Toolchain verfügbar ist. Die Aufgaben 1.1, 1.3, 2.x, 3.1, 3.2 und 4.x bleiben offen, bis sie am Gerät laufen.
+Geschrieben und auf dem Host getestet: Pin-Modul `board`, Gestenerkennung (Tippen/Wischen), CO5300-Befehls- und Rahmenlogik, CST9217-Bericht-Parser (Format unverifiziert). `firmware/` (esp-hal-Anbindung, Selbsttest) baut fehlerfrei mit der Xtensa-Toolchain 1.95.0.0, ist aber nicht auf dem Gerät getestet. Die Aufgaben 1.3, 2.x, 3.1, 3.2 und 4.x bleiben offen, bis sie am Gerät laufen.

@@ -21,6 +21,7 @@ use esp_hal::{
     },
     time::{Instant, Rate},
 };
+use esp_backtrace as _;
 use esp_println::println;
 
 esp_bootloader_esp_idf::esp_app_desc!();

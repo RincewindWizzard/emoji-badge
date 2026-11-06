@@ -17,7 +17,7 @@ cargo test
 Einmalig die Toolchain installieren:
 ```bash
 cargo install espup espflash
-espup install
+espup install --toolchain-version 1.95.0.0
 . ~/export-esp.sh
 ```
 Bauen und flashen (Board per USB-C; BOOT halten und anstecken, falls nötig):
@@ -27,5 +27,7 @@ cargo run --release
 ```
 Der Selbsttest zeigt ein Gesicht und gibt Berührungen mit den Rohbytes über die serielle Konsole aus.
 
+Hinweis: Die Toolchain `1.99.0.0` linkt mit `esp-hal 1.0` nicht (`l32r`-Fehler); `1.95.0.0` funktioniert.
+
 ## Status
-Die Hardware-Anbindung (`firmware/`) und die Treiberdetails (CO5300-Init, CST9217-Berichtsformat, Pins des Modells 1.75C) sind **nicht am Gerät geprüft**. Beim ersten Flashen können Anpassungen nötig sein; die Rohausgabe des Selbsttests dient dazu.
+Die Firmware **baut** (`cargo build --release` mit Toolchain 1.95.0.0). Die Treiberdetails (CO5300-Init, CST9217-Berichtsformat, Pins des Modells 1.75C) sind **nicht am Gerät geprüft**. Beim ersten Flashen können Anpassungen nötig sein; die Rohausgabe des Selbsttests dient dazu.
