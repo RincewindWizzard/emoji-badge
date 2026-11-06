@@ -1,0 +1,25 @@
+[package]
+name = "badge-firmware"
+version = "0.1.0"
+edition = "2021"
+# Eigenständig (nicht im Host-Workspace), wird mit der Xtensa-Toolchain gebaut: siehe ../README.md
+
+[dependencies]
+badge-core = { path = "../core" }
+badge-drivers = { path = "../drivers" }
+esp-hal = { version = "=1.0.0", features = ["esp32s3", "unstable"] }
+esp-bootloader-esp-idf = { version = "0.2", features = ["esp32s3"] }
+esp-backtrace = { version = "0.17", features = ["esp32s3", "panic-handler", "println"] }
+esp-println = { version = "0.15", features = ["esp32s3", "log-04"] }
+embedded-hal = "1.0"
+
+[profile.release]
+opt-level = "s"
+lto = "fat"
+codegen-units = 1
+debug = true
+
+[profile.dev]
+opt-level = "s"
+
+[workspace]

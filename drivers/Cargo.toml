@@ -1,0 +1,8 @@
+[package]
+name = "badge-drivers"
+version = "0.1.0"
+edition = "2021"
+description = "Hardwaretreiber (CO5300, CST9217) und Gestenerkennung, generisch über embedded-hal; auf dem Host testbar"
+
+[dependencies]
+embedded-hal = "1.0"

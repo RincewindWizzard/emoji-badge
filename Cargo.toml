@@ -1,5 +1,3 @@
 [workspace]
-members = ["core"]
-
-
+members = ["core", "drivers"]
 resolver = "2"
